@@ -21,16 +21,13 @@ public class MainActivity extends FragmentActivity {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
 //        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setTitle("Empower");
+        actionBar.setTitle(R.string.app_name);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-
-
-
-        ActionBar.Tab   home = actionBar.newTab().setText(R.string.Home),
-                        tasks = actionBar.newTab().setText(R.string.Tasks),
-                        people = actionBar.newTab().setText("People"),
-                        calendar = actionBar.newTab().setText("Calendar");
+        ActionBar.Tab   home = actionBar.newTab().setText(R.string.home),
+                        tasks = actionBar.newTab().setText(R.string.tasks),
+                        people = actionBar.newTab().setText(R.string.people),
+                        calendar = actionBar.newTab().setText(R.string.calendar);
 
         home.setTabListener(new TabListener(new HomeFragment()));
         people.setTabListener(new TabListener(new PeopleFragment()));
