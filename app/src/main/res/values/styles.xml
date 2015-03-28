@@ -1,9 +1,9 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="@android:style/Theme.Holo">
         <item name="android:textColor">@color/light_gray</item>
         <item name="android:editTextColor">@color/white</item>
+        <item name="android:windowActionBar">true</item>
     </style>
 
     <style name="SignUpTextView">
