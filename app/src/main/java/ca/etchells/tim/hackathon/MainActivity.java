@@ -21,11 +21,8 @@ public class MainActivity extends FragmentActivity {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
 //        actionBar.setDisplayShowTitleEnabled(false);
-        actionBar.setTitle("Empower");
+        actionBar.setTitle(R.string.app_name);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-
-
 
         ActionBar.Tab   home = actionBar.newTab().setText("Home"),
                         tasks = actionBar.newTab().setText("Tasks"),

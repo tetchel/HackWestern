@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 public class SplashActivity extends Activity {
-    private static final int SPLASH_TIMEOUT = 5000;
+    private static final int SPLASH_TIMEOUT = 2000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class SplashActivity extends Activity {
 
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                Intent splashIntent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent splashIntent = new Intent(SplashActivity.this, LoginScreenActivity.class);
                 startActivity(splashIntent);
 
                 finish();

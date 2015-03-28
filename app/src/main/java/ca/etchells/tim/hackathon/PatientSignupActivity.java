@@ -3,11 +3,8 @@ package ca.etchells.tim.hackathon;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
+import android.view.View;
 
-/**
- * Created by Rohit on 15-03-28.
- */
 public class PatientSignupActivity extends Activity {
 
     @Override
@@ -17,7 +14,7 @@ public class PatientSignupActivity extends Activity {
 
     }
 
-    public void signupButtonClicked(){
+    public void signupButtonClicked(View view){
         Intent loginIntent = new Intent(PatientSignupActivity.this, LoginScreenActivity.class);
         startActivity(loginIntent);
     }
