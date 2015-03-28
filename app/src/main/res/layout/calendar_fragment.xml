@@ -4,8 +4,11 @@
     android:layout_height="match_parent">
 
     <CalendarView
+        android:id="@+id/calendarView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/calendarView"
-        android:showWeekNumber="false" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+
 </LinearLayout>
