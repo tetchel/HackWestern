@@ -50,9 +50,8 @@ public class LoginSignupActivity extends Activity {
                 // Retrieve the text entered from the EditText
                 emailTxt = email.getText().toString();
                 passwordTxt = password.getText().toString();
-                firstNameTxt = firstName.getText().toString();
-                lastNameTxt = lastName.getText().toString();
-
+//                firstNameTxt = firstName.getText().toString();
+//                lastNameTxt = lastName.getText().toString();
 
                 // Send data to Parse.com for verification
                 ParseUser.logInInBackground(emailTxt, passwordTxt,
@@ -67,7 +66,7 @@ public class LoginSignupActivity extends Activity {
                                 } else {
                                     Toast.makeText(
                                             getApplicationContext(),
-                                            "No such user exist, please signup",
+                                            "No such user exists, Please sign up",
                                             Toast.LENGTH_LONG).show();
                                 }
                             }
@@ -108,9 +107,7 @@ public class LoginSignupActivity extends Activity {
                         }
                     });
                 }
-
             }
         });
-
     }
 }

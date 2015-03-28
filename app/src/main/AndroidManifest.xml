@@ -7,7 +7,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/splash"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -38,6 +38,10 @@
             android:name="ca.etchells.tim.hackathon.PatientSignupActivity"
             android:label="@string/app_name">
         </activity>
-        <activity android:name=".LoginSignupActivity"></activity>
+
+        <activity
+            android:name=".LoginSignupActivity">
+            android:label="@string/app_name">
+        </activity>
     </application>
 </manifest>
