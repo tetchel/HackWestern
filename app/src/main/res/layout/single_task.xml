@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/doneButton"
             android:layout_gravity="right"
-            android:text="@string/abc_action_mode_done" />
+            android:text="@string/abc_action_mode_done"
+            style="@style/Buttons" />
     </TableRow>
 
 
