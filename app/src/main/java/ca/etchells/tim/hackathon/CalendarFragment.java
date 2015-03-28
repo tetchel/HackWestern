@@ -9,8 +9,6 @@ import android.widget.CalendarView;
 import android.widget.CalendarView.OnDateChangeListener;
 import android.widget.Toast;
 
-import com.example.tim.hackathon.R;
-
 public class CalendarFragment extends Fragment {
     CalendarView calendar;
 

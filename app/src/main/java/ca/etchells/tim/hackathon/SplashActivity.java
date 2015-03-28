@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.tim.hackathon.R;
-
 public class SplashActivity extends Activity {
-    private static final int SPLASH_TIMEOUT = 1000;
+    private static final int SPLASH_TIMEOUT = 5000;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

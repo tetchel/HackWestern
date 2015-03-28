@@ -1,6 +1,5 @@
 package ca.etchells.tim.hackathon;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -11,14 +10,11 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.tim.hackathon.R;
-
 import java.util.ArrayList;
 
 public class TasksFragment extends Fragment {
 
     private final String TAG = "TasksFragment";
-    private Activity thisActivity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

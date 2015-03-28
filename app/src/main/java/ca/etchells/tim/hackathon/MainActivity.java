@@ -9,8 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
-import com.example.tim.hackathon.R;
-
 public class MainActivity extends FragmentActivity {
 
     @Override
