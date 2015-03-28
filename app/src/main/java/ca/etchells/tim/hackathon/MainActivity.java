@@ -3,13 +3,20 @@ package ca.etchells.tim.hackathon;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 
+import com.parse.Parse;
+import com.parse.ParseUser;
+
 public class MainActivity extends FragmentActivity {
+
+    private static final String VALUE = "OFX6gh6w8IuOrcZSJNCgrY7S05LlOGd0gDudwl6p";
+    private static final String KEY = "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +24,17 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        Parse.enableLocalDatastore(this);
+        Parse.initialize(this, KEY, VALUE );
+        // Determine whether the current user is an anonymous user
+        if (ParseUser.getCurrentUser() == null) {
+            // If user is anonymous, send the user to LoginSignupActivity.class
+            Intent intent = new Intent(MainActivity.this,
+                    LoginSignupActivity.class);
+            startActivity(intent);
+        }
+
 
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
