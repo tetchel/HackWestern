@@ -14,4 +14,8 @@
     <string name="login">Login</string>
     <string name="tasks">Tasks</string>
     <string name="placeholder">Lorem ipsum</string>
+    <string name="choose_header">Choose User Type:</string>
+    <string name="caretaker">Caretaker</string>
+    <string name="patient">Patient</string>
+    <string name="welcome">Welcome!</string>
 </resources>

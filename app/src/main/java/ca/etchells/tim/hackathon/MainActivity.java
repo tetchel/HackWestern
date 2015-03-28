@@ -1,10 +1,10 @@
 package ca.etchells.tim.hackathon;
 
+import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -17,6 +17,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getActionBar();
@@ -24,6 +25,9 @@ public class MainActivity extends FragmentActivity {
 //        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setTitle("Empower");
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+
+
 
         ActionBar.Tab   home = actionBar.newTab().setText("Home"),
                         tasks = actionBar.newTab().setText("Tasks"),
