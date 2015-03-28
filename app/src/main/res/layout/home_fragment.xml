@@ -28,7 +28,8 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/welcome"
                 android:id="@+id/textView13"
-                style="@style/SignUpTextView" />
+                style="@style/SignUpTextView"
+                android:textSize="55px" />
         </TableRow>
 
         <TableRow
@@ -40,13 +41,81 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/tasks_message"
-                android:id="@+id/textView14" />
+                android:text="@string/tasks"
+                android:id="@+id/textView14"
+                style="@style/SignUpTextView" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/SignUpTableview"></TableRow>
+            style="@style/SignUpTableview"
+            android:paddingBottom="5px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/tasks_message"
+                android:id="@+id/textView15" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SignUpTableview">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/people"
+                android:id="@+id/textView16"
+                style="@style/SignUpTextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SignUpTableview"
+            android:paddingBottom="5px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/people_message"
+                android:id="@+id/textView17" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SignUpTableview">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/calendar"
+                android:id="@+id/textView18"
+                style="@style/SignUpTextView" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SignUpTableview"
+            android:paddingBottom="5px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/calendar_message"
+                android:id="@+id/textView19" />
+        </TableRow>
+
     </LinearLayout>
+
 </RelativeLayout>
