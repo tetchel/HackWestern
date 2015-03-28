@@ -12,4 +12,7 @@
     <string name="accept">Accept</string>
     <string name="caretaker_email">Caretaker Email:</string>
     <string name="login">Login</string>
+    <string name="caretaker">Caretaker</string>
+    <string name="patient">Patient</string>
+    <string name="choose_header">Choose user type:</string>
 </resources>

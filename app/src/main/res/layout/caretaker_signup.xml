@@ -149,6 +149,7 @@
         android:id="@+id/acceptB"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        style="@style/Buttons" />
 
 </RelativeLayout>
