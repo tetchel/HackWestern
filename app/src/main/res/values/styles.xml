@@ -8,9 +8,22 @@
 
     <style name="SignUpTextView">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_marginRight">5sp</item>
         <item name="android:textSize">24sp</item>
     </style>
+
+    <style name="SignUpTableview">
+        <item name="android:layout_margin">2sp</item>
+    </style>
+
+    <style name="Buttons">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black </item>
+    </style>
+
+
+
 
 </resources>
