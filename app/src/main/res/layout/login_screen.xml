@@ -81,11 +81,12 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sign_up"
+        android:text="@string/create_account"
         android:id="@+id/loginSignupB"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        style="@style/Buttons" />
+        style="@style/Buttons"
+        android:onClick="createButtonClicked" />
 
     <Button
         android:layout_width="fill_parent"
@@ -95,5 +96,6 @@
         android:layout_alignParentTop="false"
         android:layout_centerInParent="true"
         android:layout_above="@id/loginSignupB"
-        style="@style/Buttons" />
+        style="@style/Buttons"
+        android:onClick="loginButtonClicked" />
 </RelativeLayout>
