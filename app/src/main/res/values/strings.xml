@@ -2,6 +2,7 @@
     <string name="app_name">Hackathon</string>
     <string name="action_settings">Settings</string>
 
+    <string name="placeholder">Lorem Ipsum</string>
     <string name="sign_up">Sign Up</string>
     <string name="first_name">First Name:</string>
     <string name="last_name">Last Name:</string>
@@ -12,4 +13,6 @@
     <string name="accept">Accept</string>
     <string name="caretaker_email">Caretaker Email:</string>
     <string name="login">Login</string>
+    <string name="tasks">Tasks</string>
+
 </resources>
