@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:editTextColor">@color/white</item>
+    </style>
+
+    <style name="SignUpTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+</resources>
