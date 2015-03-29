@@ -42,7 +42,9 @@
                 android:layout_height="wrap_content"
                 android:text="@string/caretaker"
                 android:id="@+id/chooseButtonCare"
-                style="@style/Buttons" />
+                style="@style/Buttons"
+                android:onClick="caretakerButtonClicked"
+                android:nestedScrollingEnabled="false" />
         </TableRow>
 
         <TableRow
@@ -54,7 +56,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/patient"
                 android:id="@+id/chooseButtonPat"
-                style="@style/Buttons" />
+                style="@style/Buttons"
+                android:onClick="patientButtonClicked" />
         </TableRow>
     </LinearLayout>
 </RelativeLayout>

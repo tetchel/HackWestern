@@ -46,12 +46,13 @@
                 style="@style/SignUpTextView" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:ems="10"
                 android:id="@+id/loginEmailEt"
-                style="@style/SignUpTextView" />
+                style="@style/SignUpTextView"
+                android:maxWidth="10dp" />
         </TableRow>
 
         <TableRow
