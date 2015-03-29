@@ -27,12 +27,13 @@ public class MainActivity extends FragmentActivity {
 
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, KEY, VALUE );
-        // Determine whether the current user is an anonymous user
+
         if (ParseUser.getCurrentUser() == null) {
-            // If user is anonymous, send the user to LoginSignupActivity.class
+
             Intent intent = new Intent(MainActivity.this,
                     LoginSignupActivity.class);
             startActivity(intent);
+            ParseUser.logOut();
         }
 
         ActionBar actionBar = getActionBar();
