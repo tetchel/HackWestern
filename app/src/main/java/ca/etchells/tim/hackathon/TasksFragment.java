@@ -51,7 +51,7 @@ public class TasksFragment extends Fragment {
 
         public ListAdapter(Context context) {
             try {
-                data.put("Win Hack Western", sdf.parse("29/03/2015 10:30"));
+                data.put("Win Hack Western ", sdf.parse("29/03/2015 10:30"));
             }
             catch(ParseException pe) { }
 
