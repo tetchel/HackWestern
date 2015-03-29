@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,6 +31,10 @@ public class TasksFragment extends Fragment {
         taskListView.setAdapter(new ListAdapter(getActivity(), data));
 
         return rootView;
+    }
+
+    public void onDoneClick(View view) {
+
     }
 
     private class ListAdapter extends BaseAdapter {
@@ -62,8 +67,19 @@ public class TasksFragment extends Fragment {
             View v = convertView;
             if(v == null)
                 v = inflater.inflate(R.layout.single_task, null);
-            TextView text = (TextView) v.findViewById(R.id.taskTextView);
+            final TextView text = (TextView) v.findViewById(R.id.taskTextView);
+            final Button button = (Button) v.findViewById(R.id.doneButton);
             text.setText(taskList.get(position));
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ViewGroup layout = (ViewGroup) button.getParent();
+                    if(layout != null) {
+                        layout.removeView(button);
+                        layout.removeView(text);
+                    }
+                }
+            });
             return v;
         }
     }
