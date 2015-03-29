@@ -24,10 +24,12 @@
     <string name="edit">Edit</string>
     <string name="add_a_person">Add A Person</string>
     <string name="add_task">Add Task</string>
-
-    <string name="tasks_message">Use the tasks tab to look at your upcoming tasks,
-                                    or to set new ones for yourself.</string>
-    <string name="people_message">Use the people tab to view your important people or to add new ones.</string>
+    <string name="task_name">Task Name:</string>
+    <string name="task_date">Task Date:</string>
+    <string name="task_description">Task Description:</string>
+    <string name="tasks_message">Use the tasks tab to look at your tasks for the day,
+                                or to set new tasks for your self.</string>
+    <string name="people_message">Use the people tab to look at important people, or to add new contacts.</string>
     <string name="calendar_message">Use the calendar tab to check out what the next few days look like.</string>
 
 </resources>
