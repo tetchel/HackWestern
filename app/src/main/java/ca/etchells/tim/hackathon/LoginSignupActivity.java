@@ -16,11 +16,11 @@ import com.parse.SignUpCallback;
 
 public class LoginSignupActivity extends Activity {
 
-    Button loginbutton;
-    Button loginsignup;
-    String emailTxt, passwordTxt, firstNameTxt, lastNameTxt, caretakerEmailTxt;
-    EditText password, email, firstName, lastName, caretakerEmail;
-    boolean isPatient = true;
+    private Button loginbutton;
+    private Button loginsignup;
+    private String emailTxt, passwordTxt, firstNameTxt, lastNameTxt, caretakerEmailTxt;
+    private EditText password, email, firstName, lastName, caretakerEmail;
+    private boolean isPatient = true;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
