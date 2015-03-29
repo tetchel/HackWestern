@@ -2,7 +2,10 @@ package ca.etchells.tim.hackathon;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
@@ -16,6 +19,7 @@ public class PeopleFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.people_fragment, container, false);
+        setHasOptionsMenu(true);
 
         ArrayList<String> data = new ArrayList<>();
         data.add("Tim");
@@ -32,4 +36,5 @@ public class PeopleFragment extends Fragment {
 
         return rootView;
     }
+
 }

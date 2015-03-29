@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
@@ -18,12 +19,24 @@ public class MainActivity extends FragmentActivity {
     private static final String VALUE = "OFX6gh6w8IuOrcZSJNCgrY7S05LlOGd0gDudwl6p";
     private static final String KEY = "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
 
+    private boolean showAdd = false;
+    private Menu menuRef;
+
+    ActionBar.Tab   home, tasks, people, calendar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getActionBar();
+
+                home = actionBar.newTab().setText(R.string.home);
+                tasks = actionBar.newTab().setText(R.string.tasks);
+                people = actionBar.newTab().setText(R.string.people);
+                calendar = actionBar.newTab().setText(R.string.calendar);
 
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, KEY, VALUE );
@@ -35,16 +48,12 @@ public class MainActivity extends FragmentActivity {
             startActivity(intent);
         }
 
-        ActionBar actionBar = getActionBar();
+
 //        actionBar.setDisplayShowHomeEnabled(false);
 //        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setTitle(R.string.app_name);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        ActionBar.Tab   home = actionBar.newTab().setText(R.string.home),
-                        tasks = actionBar.newTab().setText(R.string.tasks),
-                        people = actionBar.newTab().setText(R.string.people),
-                        calendar = actionBar.newTab().setText(R.string.calendar);
 
         home.setTabListener(new TabListener(new HomeFragment()));
         people.setTabListener(new TabListener(new PeopleFragment()));
@@ -59,16 +68,26 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+      //  menuRef = menu;
+      //  if(showAdd) {
+            getMenuInflater().inflate(R.menu.menu, menu);
+      //  }
+        Log.d("mainActivity", "Oncreating options menu");
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+//        switch (item.getItemId()) {
+//            case R.id.action_add_task:
+                Log.d("MainActivity", "Add a new task");
+//                return true;
+//            case R.id.action_settings:
+//                return true;
+
+//            default:
+//                return false;
+        //}
         return super.onOptionsItemSelected(item);
     }
 
@@ -81,7 +100,17 @@ public class MainActivity extends FragmentActivity {
 
         @Override
         public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+            if(tab == people || tab == tasks){
+              //  showAdd = true;
+                Log.d("mainActivity", "Tab equals people or tasks");
+            }
+//            else {
+//                showAdd = false;
+//            }
+         //   onCreateOptionsMenu(menuRef);
             ft.replace(R.id.fragment_container, fragment);
+
         }
 
         @Override
