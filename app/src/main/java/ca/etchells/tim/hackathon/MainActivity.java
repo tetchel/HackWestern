@@ -1,8 +1,10 @@
 package ca.etchells.tim.hackathon;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -10,6 +12,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
+import android.widget.EditText;
 
 import com.parse.Parse;
 import com.parse.ParseUser;
@@ -78,14 +81,33 @@ public class MainActivity extends FragmentActivity {
         Log.d("tag", "onOptionsItemsSelected");
         switch (item.getItemId()) {
             case R.id.action_add:
-                Log.d("tag", "action_add");
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("Add a task");
+                builder.setMessage("What do you want to do?");
+                final EditText inputField = new EditText(this);
+                builder.setView(inputField);
+                builder.setPositiveButton("Add a Reminder", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Log.d("MainActivity",inputField.getText().toString());
+                    }
+                });
+                builder.setPositiveButton("Add a Contact", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Log.d("MainActivity",inputField.getText().toString());
+                    }
+                });
+
+                builder.create().show();
                 return true;
             case R.id.action_settings:
-                Log.d("tag", "action_settings");
                 //open settings?
                 return true;
             default:
-                return super.onOptionsItemSelected(item);
+                return false;
         }
     }
 
