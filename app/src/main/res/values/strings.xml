@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Hackathon</string>
-    <string name="action_settings">Settings</string>
+    <string name="settings">Settings</string>
 
     <string name="create_account">Create a New Account</string>
     <string name="first_name">First Name:</string>
@@ -23,6 +23,7 @@
     <string name="welcome">Welcome!</string>
     <string name="edit">Edit</string>
     <string name="add_a_person">Add A Person</string>
+    <string name="add_task">Add Task</string>
 
     <string name="tasks_message">Use the tasks tab to look at your tasks for the day,
                                 or to set new tasks for your self.</string>

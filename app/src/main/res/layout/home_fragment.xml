@@ -28,8 +28,9 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/welcome"
                 android:id="@+id/textView13"
-                style="@style/Header"
-                android:textSize="55px" />
+                style="@style/SignUpTextView"
+                android:textSize="55px"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
