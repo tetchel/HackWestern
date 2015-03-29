@@ -78,12 +78,14 @@ public class MainActivity extends FragmentActivity {
         Log.d("tag", "onOptionsItemsSelected");
         switch (item.getItemId()) {
             case R.id.action_add:
+                Log.d("tag", "action_add");
                 return true;
             case R.id.action_settings:
+                Log.d("tag", "action_settings");
                 //open settings?
                 return true;
             default:
-                return false;
+                return super.onOptionsItemSelected(item);
         }
     }
 

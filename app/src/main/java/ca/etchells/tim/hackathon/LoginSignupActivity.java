@@ -20,12 +20,10 @@ public class LoginSignupActivity extends Activity {
     Button loginsignup;
     String emailTxt, passwordTxt, firstNameTxt, lastNameTxt, caretakerEmailTxt;
     EditText password, email, firstName, lastName, caretakerEmail;
-
+    boolean isPatient = true;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        boolean isPatient = savedInstanceState.getBoolean("isPatient");
-
 
         setContentView(R.layout.login_screen);
 
