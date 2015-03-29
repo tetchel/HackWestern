@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.os.Handler;
+import android.widget.ProgressBar;
+
 
 public class LoginScreenActivity extends Activity {
 
@@ -21,5 +24,10 @@ public class LoginScreenActivity extends Activity {
     public void createButtonClicked(View view){
         Intent signupIntent = new Intent(LoginScreenActivity.this, PatientSignupActivity.class);
         startActivity(signupIntent);
+    }
+
+    public void progressbar(){
+        private ProgressBar progressBar;
+        private int progressStatus = 0;
     }
 }
