@@ -20,7 +20,7 @@ public class TasksFragment extends Fragment {
 
     //should this REALLY be static
     private static LinkedHashMap<String, Date> data = new LinkedHashMap<>();
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyyy hh:mm");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy hh:mm");
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
