@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
 
     <TextView
+        style="@style/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/tasks"
-        android:id="@+id/textView11"
-        android:textSize="26sp"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/textView11"/>
 
     <ListView
         android:layout_width="match_parent"

@@ -35,9 +35,8 @@ public class MainActivity extends FragmentActivity {
             startActivity(intent);
         }
 
-
         ActionBar actionBar = getActionBar();
-        actionBar.setDisplayShowHomeEnabled(false);
+//        actionBar.setDisplayShowHomeEnabled(false);
 //        actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setTitle(R.string.app_name);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

@@ -21,6 +21,8 @@
     <string name="caretaker">Caretaker</string>
     <string name="patient">Patient</string>
     <string name="welcome">Welcome!</string>
+    <string name="edit">Edit</string>
+
     <string name="tasks_message">Use the tasks tab to look at your tasks for the day, or to set new tasks for your self.</string>
     <string name="people_message">Use the people tab to look at important people, or to add new contacts.</string>
     <string name="calendar_message">Use the calendar tab to check out what the next few days look like.</string>

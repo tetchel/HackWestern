@@ -7,23 +7,64 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="104dp"
+            android:id="@+id/imageButton"
+            android:layout_weight="3.77" />
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/taskTextView"
-            android:textSize="20sp"
-            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:id="@+id/personNameTV"
+            android:textSize="22sp"
             android:textIsSelectable="false"
             android:layout_weight="1"
-            android:text="@string/placeholder" />
+            android:text="@string/placeholder"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical|end" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/personNumberTV"
+            android:textSize="20sp"
+            android:text="@string/placeholder"
+            android:layout_marginTop="5dp" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/doneButton"
-            android:layout_gravity="right"
-            android:text="@string/abc_action_mode_done"
-            style="@style/Buttons" />
+            android:id="@+id/personEditButton"
+            android:text="@string/edit"
+            style="@style/Buttons"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/placeholder"
+            android:id="@+id/personEmailTV"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="end" />
     </TableRow>
 
 </LinearLayout>
