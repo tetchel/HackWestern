@@ -20,7 +20,9 @@
         <TextView
             style="@style/SignUpTextView"
             android:text="@string/first_name"
-            android:id="@+id/textView2" />
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <EditText
             android:layout_width="fill_parent"
@@ -39,11 +41,13 @@
         <TextView
             style="@style/SignUpTextView"
             android:text="@string/last_name"
-            android:id="@+id/textView3b">
+            android:id="@+id/textView3b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         </TextView>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
@@ -59,11 +63,13 @@
         <TextView
             style="@style/SignUpTextView"
             android:text="@string/phone_number"
-            android:id="@+id/textView3a">
+            android:id="@+id/textView3a"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
         </TextView>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
@@ -78,11 +84,13 @@
         <TextView
             style="@style/SignUpTextView"
             android:text="@string/email"
-            android:id="@+id/textView3c">
+            android:id="@+id/textView3c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         </TextView>
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
@@ -104,7 +112,7 @@
         android:layout_alignParentTop="false"
         android:layout_centerInParent="true"
         style="@style/Buttons"
-        android:onClick="perButtonClicked"
+        android:onClick="onAcceptClick"
         android:nestedScrollingEnabled="false" />
 
 

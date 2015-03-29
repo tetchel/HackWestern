@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,16 +44,17 @@ public class TasksFragment extends Fragment {
         return sdf;
     }
 
-    public static String getDateFormatAsString() {
-        return sdf.toString();
-    }
-
     private class ListAdapter extends BaseAdapter {
 
 //        private LinkedHashMap<String, Date> taskMap;
         private LayoutInflater inflater = null;
 
         public ListAdapter(Context context) {
+            try {
+                data.put("Win Hack Western", sdf.parse("29/03/2015 10:30"));
+            }
+            catch(ParseException pe) { }
+
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 

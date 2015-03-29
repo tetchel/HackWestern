@@ -5,13 +5,13 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
-import android.widget.EditText;
 
 import com.parse.Parse;
 
@@ -19,14 +19,16 @@ public class MainActivity extends FragmentActivity {
 
     private static final String VALUE = "OFX6gh6w8IuOrcZSJNCgrY7S05LlOGd0gDudwl6p";
     private static final String KEY =   "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
+    private PeopleFragment pfrg;
 
-    ActionBar.Tab   home, tasks, people, calendar;
+    private ActionBar.Tab   home, tasks, people, calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
 
+        pfrg = new PeopleFragment();
         setContentView(R.layout.activity_main);
 
         ActionBar actionBar = getActionBar();
@@ -47,7 +49,6 @@ public class MainActivity extends FragmentActivity {
 //            startActivity(intent);
 //            ParseUser.logOut();
 //        }
-
 
 //        actionBar.setDisplayShowHomeEnabled(false);
 //        actionBar.setDisplayShowTitleEnabled(false);
@@ -86,20 +87,18 @@ public class MainActivity extends FragmentActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Add a task");
                 builder.setMessage("What do you want to do?");
-                final EditText inputField = new EditText(this);
-                builder.setView(inputField);
-                builder.setPositiveButton("Add a Reminder", new DialogInterface.OnClickListener()
-                {
+                builder.setPositiveButton("Add a Reminder", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Log.d("MainActivity",inputField.getText().toString());
+                        Intent intent = new Intent(MainActivity.this, AddTaskActivity.class);
+                        startActivity(intent);
                     }
                 });
-                builder.setNegativeButton("Add a Contact", new DialogInterface.OnClickListener()
-                {
+                builder.setNegativeButton("Add a Contact", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Log.d("MainActivity",inputField.getText().toString());
+                        Intent intent = new Intent(MainActivity.this, AddPersonActivity.class);
+                        startActivity(intent);
                     }
                 });
 
