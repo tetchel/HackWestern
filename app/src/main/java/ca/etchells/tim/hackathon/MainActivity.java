@@ -17,7 +17,7 @@ import com.parse.ParseUser;
 public class MainActivity extends FragmentActivity {
 
     private static final String VALUE = "OFX6gh6w8IuOrcZSJNCgrY7S05LlOGd0gDudwl6p";
-    private static final String KEY = "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
+    private static final String KEY =   "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
 
     private boolean showAdd = false;
     private Menu menuRef;

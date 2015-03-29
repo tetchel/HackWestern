@@ -22,12 +22,18 @@ public class PeopleFragment extends Fragment {
         setHasOptionsMenu(true);
 
         ArrayList<String> data = new ArrayList<>();
-        data.add("Tim");
+        data.add("Tim Etchells");
+        data.add("Rohit Das");
 
         HashMap<String, List<String>> childData = new HashMap<>();
-        ArrayList<String> data1 = new ArrayList<String>();
-        data1.add("1231231234, tim@email.com");
-        childData.put("Etchells", data1);
+        ArrayList<String> data1 = new ArrayList<>();
+        data1.add("1231231234");
+        data1.add("tim@email.com");
+        childData.put("Tim Etchells", data1);
+        ArrayList<String> data2 = new ArrayList<>();
+        data2.add("3213213213");
+        data2.add("Rohit@email.com");
+        childData.put("Rohit Das", data2);
 
         ExpandableListView elv = (ExpandableListView) rootView.findViewById
                 (R.id.expandablePeopleListView);
