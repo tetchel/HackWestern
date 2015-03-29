@@ -21,6 +21,7 @@ public class PeopleFragment extends Fragment {
         ArrayList<String> data = new ArrayList<>();
         data.add("Tim Etchells");
         data.add("Rohit Das");
+        data.add("Spencer Roebotham");
 
         HashMap<String, List<String>> childData = new HashMap<>();
         ArrayList<String> data1 = new ArrayList<>();
