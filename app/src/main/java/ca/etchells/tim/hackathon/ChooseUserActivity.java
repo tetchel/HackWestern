@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-/**
- * Created by Spencer on 2015-03-29.
- */
 public class ChooseUserActivity extends Activity {
 
     @Override
@@ -17,8 +14,16 @@ public class ChooseUserActivity extends Activity {
     }
 
     public void patientButtonClicked(View view) {
+        startPatientIntent(true);
+    }
+
+    public void caretakerButtonClicked(View view) {
+        startPatientIntent(false);
+    }
+
+    private void startPatientIntent(boolean isPatient) {
         Intent patientIntent = new Intent(ChooseUserActivity.this, PatientSignupActivity.class);
-        boolean isPatient = true;
+        patientIntent.putExtra("isPatient", isPatient);
         startActivity(patientIntent);
     }
 

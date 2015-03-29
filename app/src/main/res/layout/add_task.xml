@@ -8,6 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".SignUpActivity"
     android:id="@+id/grandparent"
     android:background="@color/dark_gray">
 
@@ -19,17 +20,16 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            style="@style/SignUpTableview">
+            style="@style/SignUpTableview"
+            android:gravity="center_horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/login"
-                android:id="@+id/textView8"
-                style="@style/SignUpTextView"
-                android:textSize="30sp" />
+                android:text="@string/add_task"
+                android:id="@+id/textView22"
+                style="@style/Header" />
         </TableRow>
 
         <TableRow
@@ -41,18 +41,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/email"
-                android:id="@+id/textView9"
+                android:text="@string/task_name"
+                android:id="@+id/textView23"
                 style="@style/SignUpTextView" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/loginEmailEt"
-                style="@style/SignUpTextView"
-                android:maxWidth="10dp" />
+                android:id="@+id/tskName" />
         </TableRow>
 
         <TableRow
@@ -64,58 +60,50 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/password"
-                android:id="@+id/textView10"
+                android:text="@string/task_date"
+                android:id="@+id/textView24"
                 style="@style/SignUpTextView" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
+                android:inputType="date"
                 android:ems="10"
-                android:id="@+id/loginPasswordEt"
+                android:id="@+id/tskDate" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/SignUpTableview">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/task_description"
+                android:id="@+id/textView25"
                 style="@style/SignUpTextView" />
         </TableRow>
 
-
-        <Space
-            android:layout_width="match_parent"
+        <TableRow
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="1" />
+            android:layout_gravity="bottom"
+            android:layout_weight="1">
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/tskDescrip"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:layout_gravity="center_horizontal" />
-
-        <Button
-                style="@style/Buttons"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/login"
-                android:id="@+id/button"
-                android:layout_alignParentTop="false"
-                android:layout_centerInParent="true"
-                android:layout_above="@id/loginSignupB"
-                android:onClick="loginButtonClicked" />
-
-
-
-
-        <Button
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/create_account"
-                android:id="@+id/loginSignupB"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                style="@style/Buttons"
-                android:onClick="createButtonClicked" />
-
+            android:text="@string/add_task"
+            android:id="@+id/tskAddButton" />
 
     </LinearLayout>
 
-
-</RelativeLayout>

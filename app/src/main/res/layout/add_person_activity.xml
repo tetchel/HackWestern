@@ -14,14 +14,98 @@
 
     <TableRow
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        style="@style/SignUpTableview">
 
         <TextView
+            style="@style/SignUpTextView"
+            android:text="@string/first_name"
+            android:id="@+id/textView2" />
+
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView22"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/perFirstNameEt"
             style="@style/SignUpTextView" />
     </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SignUpTableview">
+
+        <TextView
+            style="@style/SignUpTextView"
+            android:text="@string/last_name"
+            android:id="@+id/textView3b">
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/perLastNameEt"
+            style="@style/SignUpTextView" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SignUpTableview">
+
+        <TextView
+            style="@style/SignUpTextView"
+            android:text="@string/phone_number"
+            android:id="@+id/textView3a">
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/perPhoneNum" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/SignUpTableview">
+
+        <TextView
+            style="@style/SignUpTextView"
+            android:text="@string/email"
+            android:id="@+id/textView3c">
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/perEmail" />
+
+    </TableRow>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_a_person"
+        android:id="@+id/perAcceptB"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="true"
+        style="@style/Buttons"
+        android:onClick="perButtonClicked"
+        android:nestedScrollingEnabled="false" />
+
+
 </LinearLayout>
