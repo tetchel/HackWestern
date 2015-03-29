@@ -2,10 +2,7 @@ package ca.etchells.tim.hackathon;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
@@ -34,6 +31,10 @@ public class PeopleFragment extends Fragment {
         data2.add("3213213213");
         data2.add("Rohit@email.com");
         childData.put("Rohit Das", data2);
+        ArrayList<String> data3 = new ArrayList<>();
+        data3.add("1111111111");
+        data3.add("spencer@canadapost.box");
+        childData.put("Spencer Roebotham", data3);
 
         ExpandableListView elv = (ExpandableListView) rootView.findViewById
                 (R.id.expandablePeopleListView);
