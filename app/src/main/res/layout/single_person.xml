@@ -75,6 +75,7 @@
         android:textSize="22sp"
         android:textIsSelectable="false"
         android:text="@string/placeholder"
+        android:paddingBottom="5dp"
         android:paddingLeft="5dp"
         android:gravity="center_vertical|end"
         android:layout_marginLeft="35dp" />

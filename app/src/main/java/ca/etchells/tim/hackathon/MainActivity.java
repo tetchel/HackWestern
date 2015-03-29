@@ -19,8 +19,7 @@ public class MainActivity extends FragmentActivity {
     private static final String VALUE = "OFX6gh6w8IuOrcZSJNCgrY7S05LlOGd0gDudwl6p";
     private static final String KEY =   "kugjKitmknJ9cMEHX8PAgVf4LNJxKkDzYpLSEXvn";
 
-    private boolean showAdd = false;
-    private Menu menuRef;
+    private int currentTabID;
 
     ActionBar.Tab   home, tasks, people, calendar;
 
@@ -33,10 +32,10 @@ public class MainActivity extends FragmentActivity {
 
         ActionBar actionBar = getActionBar();
 
-                home = actionBar.newTab().setText(R.string.home);
-                tasks = actionBar.newTab().setText(R.string.tasks);
-                people = actionBar.newTab().setText(R.string.people);
-                calendar = actionBar.newTab().setText(R.string.calendar);
+        home = actionBar.newTab().setText(R.string.home);
+        tasks = actionBar.newTab().setText(R.string.tasks);
+        people = actionBar.newTab().setText(R.string.people);
+        calendar = actionBar.newTab().setText(R.string.calendar);
 
         Parse.enableLocalDatastore(this);
         Parse.initialize(this, KEY, VALUE );
@@ -69,27 +68,23 @@ public class MainActivity extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-      //  menuRef = menu;
-      //  if(showAdd) {
-            getMenuInflater().inflate(R.menu.menu, menu);
-      //  }
+        getMenuInflater().inflate(R.menu.menu, menu);
         Log.d("mainActivity", "Oncreating options menu");
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()) {
-//            case R.id.action_add_task:
-                Log.d("MainActivity", "Add a new task");
-//                return true;
-//            case R.id.action_settings:
-//                return true;
-
-//            default:
-//                return false;
-        //}
-        return super.onOptionsItemSelected(item);
+        Log.d("tag", "onOptionsItemsSelected");
+        switch (item.getItemId()) {
+            case R.id.action_add:
+                return true;
+            case R.id.action_settings:
+                //open settings?
+                return true;
+            default:
+                return false;
+        }
     }
 
     public class TabListener implements ActionBar.TabListener {
@@ -102,14 +97,15 @@ public class MainActivity extends FragmentActivity {
         @Override
         public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
 
-            if(tab == people || tab == tasks){
-              //  showAdd = true;
-                Log.d("mainActivity", "Tab equals people or tasks");
-            }
-//            else {
-//                showAdd = false;
-//            }
-         //   onCreateOptionsMenu(menuRef);
+            if(tab == people)
+                currentTabID = 1;
+            else if(tab == tasks)
+                currentTabID = 2;
+            //it only matters if it's 1 or 2
+            else
+                currentTabID = 3;
+
+            Log.d("CURRENTTABID:", ""+currentTabID);
             ft.replace(R.id.fragment_container, fragment);
 
         }

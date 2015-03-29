@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:id="@+id/action_add_task"
+    <item android:id="@+id/action_add"
         android:showAsAction="always"
-        android:icon="@drawable/add_icon"
-        android:title="Add Task" />
+        android:icon="@drawable/add_icon_final"
+        android:title="@string/add_task" />
 
     <item android:id="@+id/action_settings"
         android:showAsAction="always"
-        android:icon="@drawable/ic_action_settings"
-        android:title="Settings" />
-
-
-
+        android:icon="@drawable/ic_action_settings_final"
+        android:title="@string/settings" />
 </menu>

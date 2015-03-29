@@ -11,7 +11,6 @@ public class PatientSignupActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_signup);
-
     }
 
     public void signupButtonClicked(View view){

@@ -61,13 +61,13 @@ public class LoginSignupActivity extends Activity {
 
                                     Toast.makeText(getApplicationContext(),
                                             "Successfully Logged in",
-                                            Toast.LENGTH_LONG).show();
+                                            Toast.LENGTH_SHORT).show();
                                     finish();
                                 } else {
                                     Toast.makeText(
                                             getApplicationContext(),
                                             "No such user exists, Please sign up",
-                                            Toast.LENGTH_LONG).show();
+                                            Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -82,10 +82,10 @@ public class LoginSignupActivity extends Activity {
                 passwordTxt = password.getText().toString();
 
                 // Force user to fill up the form
-                if (emailTxt.equals("") && passwordTxt.equals("")) {
+                if (emailTxt.equals("") || passwordTxt.equals("")) {
                     Toast.makeText(getApplicationContext(),
                             "Please complete the sign up form",
-                            Toast.LENGTH_LONG).show();
+                            Toast.LENGTH_SHORT).show();
 
                 } else {
                     // Save new user data into Parse.com Data Storage
@@ -98,10 +98,10 @@ public class LoginSignupActivity extends Activity {
                                 // Show a simple Toast message upon successful registration
                                 Toast.makeText(getApplicationContext(),
                                         "Successfully Signed up, please log in.",
-                                        Toast.LENGTH_LONG).show();
+                                        Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(getApplicationContext(),
-                                        "Sign up Error", Toast.LENGTH_LONG)
+                                        "Sign up Error", Toast.LENGTH_SHORT)
                                         .show();
                             }
                         }

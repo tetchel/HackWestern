@@ -11,11 +11,16 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedHashMap;
 
 public class TasksFragment extends Fragment {
 
-    private final String TAG = "TasksFragment";
+    //should this REALLY be static
+    private static LinkedHashMap<String, Date> data = new LinkedHashMap<>();
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyyy hh:mm");
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,37 +30,40 @@ public class TasksFragment extends Fragment {
 
         ListView taskListView = (ListView) rootView.findViewById(R.id.tasksListView);
 
-        ArrayList<String> data = new ArrayList<>();
-        data.add("Hello my name is Tim");
-        data.add("Goodbye");
-
-        taskListView.setAdapter(new ListAdapter(getActivity(), data));
+        taskListView.setAdapter(new ListAdapter(getActivity()));
 
         return rootView;
     }
 
-    public void onDoneClick(View view) {
+    public static void addTask(String description, Date date) {
+        data.put(description, date);
+    }
 
+    public static SimpleDateFormat getDateFormat() {
+        return sdf;
+    }
+
+    public static String getDateFormatAsString() {
+        return sdf.toString();
     }
 
     private class ListAdapter extends BaseAdapter {
 
-        private ArrayList<String> taskList;
+//        private LinkedHashMap<String, Date> taskMap;
         private LayoutInflater inflater = null;
 
-        public ListAdapter(Context context, ArrayList<String> data) {
-            this.taskList = data;
+        public ListAdapter(Context context) {
             inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
 
         @Override
         public int getCount() {
-            return taskList.size();
+            return data.size();
         }
 
         @Override
         public Object getItem(int position) {
-            return taskList.get(position);
+            return data.get(position);
         }
 
         @Override
@@ -68,16 +76,26 @@ public class TasksFragment extends Fragment {
             View v = convertView;
             if(v == null)
                 v = inflater.inflate(R.layout.single_task, null);
-            final TextView text = (TextView) v.findViewById(R.id.taskTextView);
+
+            final TextView text = (TextView) v.findViewById(R.id.taskTV);
+            final TextView date = (TextView) v.findViewById(R.id.taskDateTV);
             final Button button = (Button) v.findViewById(R.id.doneButton);
-            text.setText(taskList.get(position));
+
+            ArrayList<String> keys = new ArrayList<>(data.keySet());
+            final String key = keys.get(position);
+
+            text.setText(key);
+            date.setText(sdf.format(data.get(key)));
+
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     ViewGroup layout = (ViewGroup) button.getParent();
-                    if(layout != null) {
+                    if (layout != null) {
                         layout.removeView(button);
                         layout.removeView(text);
+                        layout.removeView(date);
+                        data.remove(key);
                     }
                 }
             });
