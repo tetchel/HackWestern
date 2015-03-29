@@ -93,7 +93,7 @@ public class MainActivity extends FragmentActivity {
                         Log.d("MainActivity",inputField.getText().toString());
                     }
                 });
-                builder.setPositiveButton("Add a Contact", new DialogInterface.OnClickListener()
+                builder.setNegativeButton("Add a Contact", new DialogInterface.OnClickListener()
                 {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
